@@ -22,31 +22,40 @@ public class LogInActivity extends AppCompatActivity {
 
         emailText=(EditText)findViewById(R.id.emailText);
         passwordText = (EditText)findViewById(R.id.passwordText);
-        Button clickButton = (Button) findViewById(R.id.logInButton);
-        clickButton.setOnClickListener(
-            new OnClickListener() {
+        Button logInButton = (Button) findViewById(R.id.logInButton);
+        Button regButton = (Button) findViewById(R.id.regButton);
+        logInButton.setOnClickListener(
+                new OnClickListener() {
 
-                public void onClick(View v) {
-                    if(logIn()){
-                        Context context = getApplicationContext();
-                        CharSequence text = emailText.getText().toString()+" successfully logged in.";
-                        int duration = Toast.LENGTH_SHORT;
+                    public void onClick(View v) {
+                        if(logIn()){
+                            Context context = getApplicationContext();
+                            CharSequence text = emailText.getText().toString()+" successfully logged in.";
+                            int duration = Toast.LENGTH_SHORT;
 
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
-                        Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
-                        startActivity(intent);
-                    }
-                    else{
-                        Context context = getApplicationContext();
-                        CharSequence text = passwordText.getText().toString()+" failed to log in.";
-                        int duration = Toast.LENGTH_SHORT;
+                            Toast toast = Toast.makeText(context, text, duration);
+                            toast.show();
+                            Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            Context context = getApplicationContext();
+                            CharSequence text = passwordText.getText().toString()+" failed to log in.";
+                            int duration = Toast.LENGTH_SHORT;
 
-                        Toast toast = Toast.makeText(context, text, duration);
-                        toast.show();
+                            Toast toast = Toast.makeText(context, text, duration);
+                            toast.show();
+                        }
                     }
                 }
-            }
+        );
+        regButton.setOnClickListener(
+                new OnClickListener() {
+
+                    public void onClick(View v) {
+
+                    }
+                }
         );
 
     }
