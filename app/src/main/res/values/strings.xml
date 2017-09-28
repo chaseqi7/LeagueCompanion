@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">League Companion</string>
+
+    <string name="title_activity_splash_screen">League Companion</string>
+    <string name="Enter">Welcome, Summoner!</string>
+    <string name="s">League\nCompanion</string>
 </resources>
