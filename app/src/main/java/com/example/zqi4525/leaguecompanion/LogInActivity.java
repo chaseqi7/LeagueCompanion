@@ -26,7 +26,6 @@ public class LogInActivity extends AppCompatActivity {
         Button regButton = (Button) findViewById(R.id.regButton);
         logInButton.setOnClickListener(
                 new OnClickListener() {
-
                     public void onClick(View v) {
                         if(logIn()){
                             Context context = getApplicationContext();
@@ -40,7 +39,7 @@ public class LogInActivity extends AppCompatActivity {
                         }
                         else{
                             Context context = getApplicationContext();
-                            CharSequence text = passwordText.getText().toString()+" failed to log in.";
+                            CharSequence text = emailText.getText().toString()+" failed to log in.";
                             int duration = Toast.LENGTH_SHORT;
 
                             Toast toast = Toast.makeText(context, text, duration);
@@ -53,7 +52,8 @@ public class LogInActivity extends AppCompatActivity {
                 new OnClickListener() {
 
                     public void onClick(View v) {
-
+                        Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                        startActivity(intent);
                     }
                 }
         );

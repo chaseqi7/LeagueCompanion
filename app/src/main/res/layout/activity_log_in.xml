@@ -10,7 +10,6 @@
         android:id="@+id/logInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
         android:text="Log In"
         app:layout_constraintBottom_toTopOf="@+id/regButton"
         app:layout_constraintHorizontal_bias="0.0"
@@ -18,30 +17,32 @@
         app:layout_constraintRight_toRightOf="@+id/regButton"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginBottom="-7dp" />
 
     <EditText
         android:id="@+id/passwordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="0dp"
         android:ems="10"
         android:inputType="textPassword"
         android:text="Password"
         app:layout_constraintLeft_toLeftOf="@+id/emailText"
         app:layout_constraintTop_toBottomOf="@+id/emailText"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginLeft="-87dp" />
 
     <EditText
         android:id="@+id/emailText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="29dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.206"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -59,15 +60,25 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintLeft_creator="1"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        android:layout_marginBottom="56dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.819" />
 
     <CheckBox
         android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="32dp"
         android:text="Remember Me"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="223dp" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="78dp"
+        app:layout_constraintBottom_toBottomOf="@+id/regButton"
+        android:layout_marginTop="223dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="224dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="78dp"
+        app:layout_constraintVertical_bias="0.169" />
 
 </android.support.constraint.ConstraintLayout>
