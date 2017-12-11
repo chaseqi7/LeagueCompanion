@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                             user = database.userDao().getAllUser().get(2);
                             Context context = getApplicationContext();
-                            CharSequence text = ign.getText().toString()+user.name+" successfully registered.";
+                            CharSequence text = ign.getText().toString()+user.email+" successfully registered.";
                             int duration = Toast.LENGTH_SHORT;
 
                             Toast toast = Toast.makeText(context, text, duration);
