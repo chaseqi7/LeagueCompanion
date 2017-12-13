@@ -44,7 +44,7 @@
         android:layout_marginLeft="-87dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Password"
+        android:text="IGN"
         app:layout_constraintLeft_toLeftOf="@+id/passwordText"
         app:layout_constraintTop_toBottomOf="@+id/passwordText"
         tools:layout_constraintLeft_creator="1"

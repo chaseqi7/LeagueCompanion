@@ -14,11 +14,14 @@ import android.view.View.OnClickListener;
 public class LogInActivity extends AppCompatActivity {
     private EditText emailText;
     private EditText passwordText;
+    private User user;
+    private AppDatabase database;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
+        database = AppDatabase.getDatabase(getApplicationContext());
 
         emailText=(EditText)findViewById(R.id.emailText);
         passwordText = (EditText)findViewById(R.id.passwordText);
@@ -62,7 +65,8 @@ public class LogInActivity extends AppCompatActivity {
     public boolean logIn(){
         String emailAddress=emailText.getText().toString();
         String password=passwordText.getText().toString();
-        if(emailAddress.equals("qiziming1@gmail.com") && password.equals("Password")){
+        if(password.equals(database.userDao().verifyPassword(emailAddress)))
+        {
             return true;
         }
 

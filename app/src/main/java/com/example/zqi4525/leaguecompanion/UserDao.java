@@ -15,13 +15,16 @@ import java.util.List;
 @Dao
 public interface UserDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void addUser(User user);
+    long addUser(User user);
 
     @Query("select * from user")
     public List<User> getAllUser();
 
     @Query("select * from user where id = :userId")
     public List<User> getUser(long userId);
+
+    @Query("select password from user where email = :email")
+    public String verifyPassword(String email);
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateUser(User user);
