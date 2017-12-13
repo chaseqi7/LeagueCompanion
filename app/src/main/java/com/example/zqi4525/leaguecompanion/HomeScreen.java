@@ -21,7 +21,7 @@ public class HomeScreen extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen);
         String ign = getIntent().getExtras().getString("ign");
         welcomeMsg= findViewById(R.id.welcomeMsg);
-        welcomeMsg.setText("Welcome, " + ign);
+        welcomeMsg.setText("Welcome, " + ign+"!!");
         Button timerButton = (Button) findViewById(R.id.timer);
         Button matchPreviewButton = (Button) findViewById(R.id.matchPreview);
         Button logOutButton = (Button) findViewById(R.id.logOut);

@@ -31,7 +31,6 @@ public class LogInActivity extends AppCompatActivity {
         Button regButton = (Button) findViewById(R.id.regButton);
 
         String lastUser=database.rememberLogInDao().getLastUser();
-        Toast.makeText(getApplicationContext(), lastUser, Toast.LENGTH_SHORT).show();
         if(lastUser != null && !lastUser.isEmpty())
         {
             Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
@@ -47,7 +46,6 @@ public class LogInActivity extends AppCompatActivity {
                             if(chkRemember.isChecked()){
                                 database.rememberLogInDao().insert(new RememberLogIn(0, ign));
                                 String lastUser=database.rememberLogInDao().getLastUser();
-                                Toast.makeText(getApplicationContext(), lastUser, Toast.LENGTH_SHORT).show();
                             }
                             CharSequence text = ign+" successfully logged in.";
 

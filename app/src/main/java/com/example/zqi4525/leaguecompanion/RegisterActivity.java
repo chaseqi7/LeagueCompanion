@@ -40,11 +40,10 @@ public class RegisterActivity extends AppCompatActivity {
                         String password=passwordText.getText().toString();
                         String ign=ignText.getText().toString();
                         long id=database.userDao().addUser(new User(0,emailAddress, password,ign));
-                        Toast.makeText(getApplicationContext(),  String.valueOf(id), Toast.LENGTH_SHORT).show();
 
                         user = database.userDao().getAllUser().get((int)id-1);
                         Context context = getApplicationContext();
-                        CharSequence text = ign+user.email+" successfully registered.";
+                        CharSequence text = ign+" successfully registered.";
                         int duration = Toast.LENGTH_SHORT;
 
                         Toast toast = Toast.makeText(context, text, duration);
