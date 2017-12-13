@@ -40,7 +40,7 @@ public class HomeScreen extends AppCompatActivity {
                     public void onClick(View v) {
                         int duration = Toast.LENGTH_SHORT;
 
-                        Toast toast = Toast.makeText(getApplicationContext(), "Coming soonTM.", duration);
+                        Toast toast = Toast.makeText(getApplicationContext(), "Coming Soon™.", duration);
                         toast.show();
                     }
                 }
