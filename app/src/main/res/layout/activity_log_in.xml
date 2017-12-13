@@ -65,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.819" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/chkRem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Remember Me"

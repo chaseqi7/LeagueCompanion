@@ -8,12 +8,12 @@
     tools:context="com.example.zqi4525.leaguecompanion.HomeScreen">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeMsg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="124dp"
         android:ems="10"
-        android:text="Welcome to Home screen"
+        android:text="TextView"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Timer"
-        app:layout_constraintLeft_toLeftOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintLeft_toLeftOf="@+id/welcomeMsg"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeMsg"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="300dp" />
     <Button
@@ -38,6 +38,15 @@
         android:text="Match Preview"
         app:layout_constraintLeft_toLeftOf="@+id/timer"
         app:layout_constraintTop_toBottomOf="@+id/timer"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="300dp" />
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log out"
+        app:layout_constraintLeft_toLeftOf="@+id/matchPreview"
+        app:layout_constraintTop_toBottomOf="@+id/matchPreview"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="300dp" />
 </android.support.constraint.ConstraintLayout>

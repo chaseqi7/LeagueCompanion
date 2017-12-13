@@ -8,12 +8,14 @@ import android.arch.persistence.room.RoomDatabase;
 /**
  * Created by Zqi4525 on 11/29/2017.
  */
-@Database(entities = {User.class}, version = 20, exportSchema = false)
+@Database(entities = {User.class, RememberLogIn.class}, version = 22, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;
 
     public abstract UserDao userDao();
+
+    public abstract RememberLogInDao rememberLogInDao();
 
     public static AppDatabase getDatabase(Context context) {
         if (INSTANCE == null) {

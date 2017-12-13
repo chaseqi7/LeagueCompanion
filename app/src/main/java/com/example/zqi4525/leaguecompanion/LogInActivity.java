@@ -9,11 +9,12 @@ import android.widget.Toast;
 import android.widget.Button;
 import android.view.View;
 import android.view.View.OnClickListener;
-
+import android.widget.CheckBox;
 
 public class LogInActivity extends AppCompatActivity {
     private EditText emailText;
     private EditText passwordText;
+    private CheckBox chkRemember;
     private User user;
     private AppDatabase database;
 
@@ -25,19 +26,35 @@ public class LogInActivity extends AppCompatActivity {
 
         emailText=(EditText)findViewById(R.id.emailText);
         passwordText = (EditText)findViewById(R.id.passwordText);
+        chkRemember=(CheckBox)findViewById(R.id.chkRem);
         Button logInButton = (Button) findViewById(R.id.logInButton);
         Button regButton = (Button) findViewById(R.id.regButton);
+
+        String lastUser=database.rememberLogInDao().getLastUser();
+        Toast.makeText(getApplicationContext(), lastUser, Toast.LENGTH_SHORT).show();
+        if(lastUser != null && !lastUser.isEmpty())
+        {
+            Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+            intent.putExtra("ign",lastUser);
+            startActivity(intent);
+        }
+
         logInButton.setOnClickListener(
                 new OnClickListener() {
                     public void onClick(View v) {
                         if(logIn()){
-                            Context context = getApplicationContext();
-                            CharSequence text = emailText.getText().toString()+" successfully logged in.";
-                            int duration = Toast.LENGTH_SHORT;
+                            String ign=database.userDao().getIgn(emailText.getText().toString()).toString();
+                            if(chkRemember.isChecked()){
+                                database.rememberLogInDao().insert(new RememberLogIn(0, ign));
+                                String lastUser=database.rememberLogInDao().getLastUser();
+                                Toast.makeText(getApplicationContext(), lastUser, Toast.LENGTH_SHORT).show();
+                            }
+                            CharSequence text = ign+" successfully logged in.";
 
-                            Toast toast = Toast.makeText(context, text, duration);
+                            Toast toast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_SHORT);
                             toast.show();
                             Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                            intent.putExtra("ign",ign);
                             startActivity(intent);
                         }
                         else{

@@ -27,17 +27,6 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         database = AppDatabase.getDatabase(getApplicationContext());
 
-//        if (users.size()==0) {
-//            database.userDao().addUser(new User("Test 1", "123"));
-//            user = database.userDao().getAllUser().get(0);
-//            Toast.makeText(this, String.valueOf(user.id), Toast.LENGTH_SHORT).show();
-//            database.userDao().addUser(new User("Test 2", "213"));
-//
-//            user = database.userDao().getAllUser().get(1);
-//            Toast.makeText(this, String.valueOf(user.id), Toast.LENGTH_SHORT).show();
-//
-//        }
-
         emailText=(EditText)findViewById(R.id.emailText);
         passwordText = (EditText)findViewById(R.id.passwordText);
         ignText = (EditText)findViewById(R.id.ignText);

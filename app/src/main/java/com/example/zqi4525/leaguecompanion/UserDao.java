@@ -26,6 +26,9 @@ public interface UserDao {
     @Query("select password from user where email = :email")
     public String verifyPassword(String email);
 
+    @Query("select ign from user where email = :email")
+    public String getIgn(String email);
+
     @Update(onConflict = OnConflictStrategy.REPLACE)
     void updateUser(User user);
 
