@@ -60,7 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
-                        Intent intent = new Intent(getApplicationContext(), HomeScreen.class);
+                        Intent intent = new Intent(getApplicationContext(), LogInActivity.class);
                         startActivity(intent);
                     }
                 }
