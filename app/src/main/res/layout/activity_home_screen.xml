@@ -32,10 +32,10 @@
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="300dp" />
     <Button
-        android:id="@+id/matchPreview"
+        android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Match Preview"
+        android:text="About"
         app:layout_constraintLeft_toLeftOf="@+id/timer"
         app:layout_constraintTop_toBottomOf="@+id/timer"
         tools:layout_editor_absoluteX="64dp"
@@ -45,8 +45,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log out"
-        app:layout_constraintLeft_toLeftOf="@+id/matchPreview"
-        app:layout_constraintTop_toBottomOf="@+id/matchPreview"
+        app:layout_constraintLeft_toLeftOf="@+id/about"
+        app:layout_constraintTop_toBottomOf="@+id/about"
         tools:layout_editor_absoluteX="64dp"
         tools:layout_editor_absoluteY="300dp" />
 </android.support.constraint.ConstraintLayout>

@@ -4,4 +4,9 @@
     <string name="title_activity_splash_screen">League Companion</string>
     <string name="Enter">Welcome, Summoner!</string>
     <string name="s">League\nCompanion</string>
+    <string name="meIcon">MEICON</string>
+    <string name="call_me">Call Me</string>
+    <string name="github">Github</string>
+    <string name="reset_database">Reset Database</string>
+    <string name="send_notifications">Send Notifications</string>
 </resources>

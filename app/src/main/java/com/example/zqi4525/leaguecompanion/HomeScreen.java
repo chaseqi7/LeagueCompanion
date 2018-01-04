@@ -23,7 +23,7 @@ public class HomeScreen extends AppCompatActivity {
         welcomeMsg= findViewById(R.id.welcomeMsg);
         welcomeMsg.setText("Welcome, " + ign+"!!");
         Button timerButton = (Button) findViewById(R.id.timer);
-        Button matchPreviewButton = (Button) findViewById(R.id.matchPreview);
+        Button aboutButton = (Button) findViewById(R.id.about);
         Button logOutButton = (Button) findViewById(R.id.logOut);
         timerButton.setOnClickListener(
                 new View.OnClickListener() {
@@ -34,14 +34,12 @@ public class HomeScreen extends AppCompatActivity {
                     }
                 }
         );
-        matchPreviewButton.setOnClickListener(
+        aboutButton.setOnClickListener(
                 new View.OnClickListener() {
 
                     public void onClick(View v) {
-                        int duration = Toast.LENGTH_SHORT;
-
-                        Toast toast = Toast.makeText(getApplicationContext(), "Coming soonTM.", duration);
-                        toast.show();
+                        Intent intent = new Intent(getApplicationContext(), AboutActivity.class);
+                        startActivity(intent);
                     }
                 }
         );

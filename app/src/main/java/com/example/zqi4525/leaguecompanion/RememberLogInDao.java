@@ -21,6 +21,6 @@ public interface RememberLogInDao {
     @Query("select ign from RememberLogIn where id = 0")
     public String getLastUser();
 
-    @Query("delete from RememberLogIn")
+    @Query("delete from RememberLogIn; ")
     void removeAllUsers();
 }

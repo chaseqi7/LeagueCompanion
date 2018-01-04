@@ -1,16 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.zqi4525.leaguecompanion.TimerActivity">
 
-    <TextView
-        android:id="@+id/mTextField"
+
+    <ImageButton
+        android:id="@+id/flashButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="86dp" />
-</android.support.constraint.ConstraintLayout>
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/flash" />
+
+    <ImageButton
+        android:id="@+id/teleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/flashButton"
+        android:layout_below="@+id/flashButton"
+        app:srcCompat="@drawable/teleport" />
+
+    <TextView
+        android:id="@+id/flashText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/flashButton"
+        android:layout_marginBottom="31dp"
+        android:layout_marginStart="59dp"
+        android:layout_toEndOf="@+id/flashButton"
+        android:text="Flash is up!" />
+
+    <TextView
+        android:id="@+id/teleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/teleButton"
+        android:layout_alignStart="@+id/flashText"
+        android:layout_marginBottom="24dp"
+        android:text="Teleport is up!" />
+
+
+</RelativeLayout>
+
